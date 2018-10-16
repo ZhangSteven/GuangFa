@@ -17,10 +17,7 @@ def getTradeFiles(files):
 	"""
 	[list] txt files => [list] trade files
 	"""
-	def isTradeFile(fileName):
-		return 'trddata' in fileName.split('\\')[-1]
-
-	return list(filter(isTradeFile, files))
+	return list(filter(lambda fn: 'trddata' in fn.split('\\')[-1], files))
 
 
 
